@@ -37,7 +37,7 @@ ma.dropna(inplace = True)
 signals = pd.DataFrame()
 
 
-
+#De aqui para baixo é palha
 eth['21-day'] = eth['Close'].rolling(21).mean() 
 eth['signal'] = np.where(eth['9-day'] > eth['21-day'], 1, 0)
 eth['signal'] = np.where(eth['9-day'] < eth['21-day'], -1, eth['signal'])
